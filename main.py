@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import spotipy
-client_id = "0ddb3a2303f044f8953c7481353eb812"
-client_secret = "bf9691f7ef4745f98a668ddf28e1be04"
+client_id = #YOUR CLIENT ID
+client_secret = #YOUR CLIENT SECRET
 re_uri ="http://example.com"
 
 
@@ -32,7 +32,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
 
 user_id = sp.current_user()['id']
 print(user_id)
-# id = pwusk2lg2mj9t7lg54sksk8ot
+
 
 from pprint import pprint
 date_input = input("which year you want the playlist in format YYYY-MM-DD: " )
@@ -64,6 +64,5 @@ playlist_id = new_playlist['id']
 print(playlist_id)
 add_items = sp.playlist_add_items(playlist_id, items=songs_uri, position=None)
 cover = sp.playlist_cover_image(playlist_id)
-playlist_id="11EwlBK5HuKOba7Sto9uyW"
+
 playlist_items = sp.playlist_items(playlist_id)
-print(playlist_items)
